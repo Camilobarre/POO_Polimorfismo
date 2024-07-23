@@ -12,6 +12,15 @@ public class Animal
     public string? Especie { get; set; }
     public double PesoEnKG { get; set; }
 
+    public Animal(string nombre, string genero, string especie, double pesoEnKG)
+    {
+        Id = new Guid();
+        Nombre = nombre;
+        Genero = genero;
+        Especie = especie;
+        PesoEnKG = pesoEnKG;
+    }
+
     // El polimorfismo solo aplica para métodos, no para propiedades. 
     // Se usa la palabra reservada virtual, y en la clase heradada se usa la palabra reservada override
     public virtual void Hablar()
